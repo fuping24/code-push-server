@@ -141,7 +141,7 @@ export class PackageDiffer {
               .on("error", (error: any): void => {
                 reject(error);
               })
-              .on("entry", (entry: yauzl.IEntry): void => {
+              .on("entry", (entry: yauzl.Entry): void => {
                 if (
                   !PackageDiffer.isEntryInMap(entry.fileName, /*hash*/ null, diff.newOrUpdatedEntries, /*requireContentMatch*/ false)
                 ) {

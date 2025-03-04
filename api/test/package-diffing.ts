@@ -103,7 +103,7 @@ function packageDiffTests(StorageType: new (...args: any[]) => storage.Storage):
                 .on("error", (error: any): void => {
                   throw error;
                 })
-                .on("entry", (entry: yauzl.IEntry): void => {
+                .on("entry", (entry: yauzl.Entry): void => {
                   zipFile.openReadStream(entry, (error?: any, readStream?: stream.Readable): void => {
                     if (error) {
                       throw error;
@@ -183,7 +183,7 @@ function packageDiffTests(StorageType: new (...args: any[]) => storage.Storage):
                 .on("error", (error: any): void => {
                   throw error;
                 })
-                .on("entry", (entry: yauzl.IEntry): void => {
+                .on("entry", (entry: yauzl.Entry): void => {
                   zipFile.openReadStream(entry, (error?: any, readStream?: stream.Readable): void => {
                     if (error) {
                       throw error;
